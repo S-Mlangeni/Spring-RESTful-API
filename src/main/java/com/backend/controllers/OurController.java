@@ -35,14 +35,14 @@ public class OurController {
 	@Autowired
 	OurService service;
 	
-	@PostMapping("/fourth")
+	@PostMapping("/entry")
 	/* @RequestBody matches/maps and assigns the incoming json object properties 
 	to those defined in the class object. */ 
 	public OurEntity fourthmethod(@RequestBody OurEntity data) {
 		return service.serve(data);
 	}
 	
-	@PostMapping("/fifth")
+	@PostMapping("/search")
 	public Boolean fifthmethod(@RequestBody OurSearch searchdata) {
 		return service.searchingdb(searchdata);
 	}
